@@ -1,21 +1,21 @@
 {
   "parser": "babel-eslint",
-  "extends": [
-    "eslint: recommended",
-    "google"
-  ],
+  "rules": {
+    "no-unused-vars": "warn",
+    "semi": "off",
+    "arrow-parens": "off",
+    "comma-dangle": "off",
+    "require-jsdoc": "off",
+    "no-unsafe-finally": 0,
+    "no-func-assign": "warn"
+  },
   "env": {
     "es6": true,
     "browser": true,
     "node": true
   },
-  "parserOptions": {
-    "ecmaVersion": 2017
-  },
-  "rules": {
-    "semi": "off",
-    "arrow-parens": "off",
-    "comma-dangle": "off",
-    "require-jsdoc": "off"
-  }
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ]
 }

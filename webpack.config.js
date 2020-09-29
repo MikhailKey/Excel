@@ -12,9 +12,10 @@ const filename = ext => isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`;
 const jsLoaders = () => {
   const loaders = [
     {
-      loader: "babel-loader",
+      loader: 'babel-loader',
       options: {
-        presets: ["@babel/preset-env"]
+        presets: ['@babel/preset-env'],
+        plugins: ['@babel/plugin-proposal-class-properties']
       }
     }
   ]
@@ -42,7 +43,7 @@ module.exports = {
   },
   devtool: isDev ? 'source-map' : false,
   devServer: {
-    port: '5000',
+    port: 5000,
     hot: isDev
   },
   plugins: [
